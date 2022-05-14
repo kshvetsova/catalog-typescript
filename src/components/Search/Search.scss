@@ -1,0 +1,73 @@
+@import "../styles/main";
+
+.Search {
+  box-shadow: -1px 0 0 0 $colorElements;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-right: $colorElements;
+  margin-right: 1px;
+  flex-grow: 1;
+
+  &-Input {
+    display: flex;
+    height: 64px;
+    padding-left: 24px;
+    width: 327px;
+    padding-right: 64px;
+    flex-grow: 1;
+
+    &::placeholder {
+      @include fontSet("Mont Semi Bold", 14px);
+      color: $colorIcons;
+      line-height: 17px;
+    }
+
+    &:focus {
+      background: $colorHover;
+    }
+  }
+
+  .button-search {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 242, 242, 0);
+    width: 16px;
+    height: 64px;
+    top: 0;
+    right: 24px;
+
+    @media (max-width: $breakPointMobileSmall) {
+      right: 10px;
+    }
+  }
+}
+
+.search_hidden {
+  display: none;
+}
+
+@media (max-width: $breakPointTablet) {
+  .Search {
+    &-Input,
+    .button-search {
+      height: 54px;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .button-search {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .Search-Input {
+    width: 0;
+    padding-left: 10px;
+    padding-right: 36px;
+  }
+}

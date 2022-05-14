@@ -1,0 +1,17 @@
+[
+  {
+    "type": "phones",
+    "title": "Mobile phones",
+    "image": "img/category/phones.jpg"
+  },
+  {
+    "type": "tablets",
+    "title": "Tablets",
+    "image": "img/category/tablets.jpg"
+  },
+  {
+    "type": "watches",
+    "title": "Watches",
+    "image": "img/category/watches.jpg"
+  }
+]

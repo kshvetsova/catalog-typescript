@@ -1,0 +1,128 @@
+@import "../styles/main";
+
+.PromoSlider {
+  width: $widthContent;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  @media (max-width: $breakPointTablet) {
+    margin-top: 60px;
+  }
+
+  &-Block {
+    width: fit-content;
+    display: flex;
+  }
+
+  &-Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    border: 1px solid $colorIcons;
+    background: $colorBackground;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+  }
+
+  &-Container {
+    display: block;
+    margin: 0 16px;
+    padding: 0;
+    overflow: hidden;
+    width: 72.1vw;
+    object-fit: fill;
+    height: 32vw;
+  }
+
+  &-List {
+    display: flex;
+    padding: 0;
+    transition: margin-left 250ms;
+  }
+
+  &-Item {
+    display: flex;
+    padding: 0;
+  }
+
+  &-BlockButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    align-self: center;
+  }
+
+  &-SliderButton {
+    width: 14px;
+    height: 4px;
+    background: $colorElements;
+    margin-right: 14px;
+  }
+}
+
+.image {
+  width: 72.2vw;
+  height: 32.2vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+.button_active {
+  background: $colorPrimary;
+}
+
+@media (max-width: $breakPointMobile) {
+  .PromoSlider {
+    margin-top: 32px;
+    &-Container {
+      height: 38vw;
+    }
+    .image {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .PromoSlider {
+    width: $widthContentMobile;
+
+    &-Container {
+      margin: 0;
+    }
+
+    &-Block {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &-BlockButtons {
+      margin-top: 8px;
+    }
+
+    &-Button {
+      width: 100%;
+      max-width: 32px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .PromoSlider {
+    &-Container {
+      margin: 0 2vw;
+    }
+
+    &-Button {
+      width: 0;
+      max-width: 25px;
+      flex-grow: 1;
+    }
+  }
+}

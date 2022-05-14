@@ -1,0 +1,82 @@
+@import "../styles/main";
+
+.Pagination {
+  width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+
+  &-List {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+  }
+
+  &-Button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $colorIcons;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: border-color 0.3s;
+
+    &_prev {
+      background-image: url("../icons/prev.svg");
+    }
+
+    &_next {
+      background-image: url("../icons/next.svg");
+    }
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+  }
+
+  &-Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $colorElements;
+    @include fontSet("Mont Regular", 14px);
+    color: #000;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .disabled_next {
+    background-image: url("../icons/next-disabled.svg");
+    border-color: $colorElements;
+    cursor: not-allowed;
+  }
+
+  .disabled_prev {
+    background-image: url("../icons/prev-disabled.svg");
+    border-color: $colorElements;
+    cursor: not-allowed;
+  }
+}
+
+.active_item {
+  background: $colorPrimary;
+  border-color: $colorPrimary;
+  color: $colorBackground;
+}
+
+@media (max-width: 620px) {
+  .Pagination {
+    display: none;
+  }
+}

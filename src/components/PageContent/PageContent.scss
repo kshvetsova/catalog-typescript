@@ -1,0 +1,164 @@
+@import "../styles/main";
+
+.PageContent {
+  display: flex;
+  flex-direction: column;
+  width: $widthContent;
+  margin: 0 auto;
+  justify-content: start;
+  margin-top: 24px;
+  padding-bottom: 80px;
+
+  &-SearchGif,
+  &-FavoritesGif {
+    margin: auto;
+    display: flex;
+  }
+
+  .Breadcrumbs {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    margin-bottom: 40px;
+
+    &-Item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 16px;
+      @include fontSet("Mont Semi Bold", 12px);
+      color: $colorSecondary;
+      line-height: 15.3px;
+    }
+  }
+
+  &-Title {
+    @include fontSet("Mont Bold", 32px);
+    color: $colorPrimary;
+    margin-bottom: 8px;
+    line-height: 40px;
+  }
+
+  &-Count {
+    @include fontSet("Mont Regular", 14px);
+    color: $colorSecondary;
+    margin-bottom: 40px;
+    line-height: 21px;
+  }
+
+  &-Results {
+    @include fontSet("Mont Regular", 14px);
+    color: $colorSecondary;
+    margin-bottom: 24px;
+    line-height: 21px;
+  }
+
+  &-Content {
+    width: $widthContent;
+    padding: 0 ;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 272px);
+    gap: 40px 10px;
+  }
+
+  &-Selects {
+    display: flex;
+  }
+
+  &-SelectSort {
+    width: 176px;
+    margin-right: 16px;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+  }
+
+  &-SelectPageItems {
+    width: 128px;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+  }
+
+  &-SelectName {
+    @include fontSet("Mont Semi Bold", 12px);
+    color: $colorSecondary;
+    margin-bottom: 4px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: $breakPointTablet) {
+  .PageContent {
+    &-Content {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .PageContent {
+    width: 100%;
+    padding-bottom: 24px;
+
+    &-Nav {
+      margin-bottom: 30px;
+    }
+
+    .Breadcrumbs {
+      margin-bottom: 24px;
+    }
+
+    &-Title {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 25px;
+    }
+
+    &-Count {
+      @include fontSet("Mont Regular", 12px);
+      margin-bottom: 24px;
+      line-height: 12px;
+    }
+
+    &-Results {
+      @include fontSet("Mont Regular", 12px);
+    }
+
+    &-Content {
+      width: 100%;
+      gap: 30px 10px;
+    }
+
+    &-FavoritesGif {
+      width: 220px;
+      margin-top: 70px;
+    }
+
+    &-SearchGif {
+      width: 320px;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .PageContent {
+    &-SearchGif {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 40px;
+    }
+
+    &-FavoritesGif {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .PageContent-SelectsContainer_hidden {
+    display: none;
+  }
+}

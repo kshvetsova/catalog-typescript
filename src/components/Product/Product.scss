@@ -1,0 +1,148 @@
+@import "../styles/main";
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  height: 507px;
+  border: 1px solid $colorElements;
+  align-items: center;
+  padding: 24px;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  background: $colorBackground;
+
+  &-ImageContainer {
+    width: 208px;
+    height: 208px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.35s;
+
+    &::before {
+      content: "";
+      background: rgba(49, 50, 55, 0.4);
+      position: absolute;
+      top: 125px;
+      left: 50%;
+      width: 0%;
+      height: 250px;
+      transform: translate(-50%, -50%);
+      transition: all 0.5s ease;
+    }
+
+    &::after {
+      content: "Read more";
+      @include fontSet("Mont Semi Bold", 16px);
+      color: $colorBackground;
+      width: 120px;
+      height: 50px;
+      border: 1px solid $colorBackground;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: calc(125px - (50px / 2));
+      left: calc(50% - 3px - (120px / 2));
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &-Image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .watches_image {
+    width: 180px;
+    height: 180px;
+  }
+
+  &-Info {
+    width: 100%;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  &-Name {
+    display: flex;
+    width: 100%;
+    max-height: 63px;
+    @include fontSet("Mont Regular", 14px);
+    color: $colorPrimary;
+    line-height: 21px;
+  }
+
+  .line {
+    height: 1px;
+    width: 100%;
+    background: $colorElements;
+  }
+}
+
+.Details {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+
+  &-Item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fontSet("Mont Semi Bold", 12px);
+    line-height: 15px;
+  }
+
+  &-Name {
+    color: $colorSecondary;
+  }
+
+  &-Value {
+    color: $colorPrimary;
+  }
+}
+
+.PriceBlock {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  margin: 6px 0;
+
+  &-Price {
+    margin-right: 8px;
+    @include fontSet("Mont Bold", 22px);
+    color: $colorPrimary;
+    line-height: 28px;
+  }
+
+  &-Sale {
+    @include fontSet("Mont Regular", 22px);
+    color: $colorSecondary;
+    line-height: 28px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: $colorSecondary;
+      top: 48%;
+      left: 0;
+    }
+  }
+}

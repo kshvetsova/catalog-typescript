@@ -1,0 +1,204 @@
+@import "../styles/main";
+
+.Category {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: $widthContent;
+  margin: 0 auto;
+
+  &-Title {
+    align-self: flex-start;
+    margin-bottom: 24px;
+    @include fontSet("Mont Bold", 32px);
+    color: $colorPrimary;
+    line-height: 40px;
+  }
+
+  &-List {
+    display: flex;
+    width: $widthContent;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-Image {
+    width: 25vw;
+    height: 20vw;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      background: rgba(49, 50, 55, 0.4);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 0%;
+      transform: translate(-50%, -50%);
+      transition: all 0.5s ease;
+    }
+
+    &::after {
+      content: "";
+      @include fontSet("Mont Semi Bold", 16px);
+      line-height: 18px;
+      color: $colorBackground;
+      width: 130px;
+      height: 50px;
+      border: 1px solid $colorBackground;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: calc(50% - (50px / 2));
+      left: calc(50% - (130px / 2));
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+
+    &:hover::before {
+      height: 100%;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &-Item:nth-child(1) > &-Image {
+    &::after {
+      content: "Phones";
+    }
+  }
+
+  &-Item:nth-child(2) > &-Image {
+    &::after {
+      content: "Tablets";
+    }
+  }
+
+  &-Item:nth-child(3) > &-Image {
+    &::after {
+      content: "Watches";
+    }
+  }
+
+  .category-image {
+    width: 25vw;
+    height: 20vw;
+  }
+
+  &-Model {
+    align-self: flex-start;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &-ItemTitle {
+    @include fontSet("Mont Semi Bold", 20px);
+    color: $colorPrimary;
+    line-height: 25px;
+  }
+
+  &-CountModel {
+    @include fontSet("Mont Regular", 14px);
+    color: $colorSecondary;
+    margin-top: 4px;
+    line-height: 21px;
+  }
+
+}
+
+@media (max-width: $breakPointMobile) {
+  .Category {
+    &-Title {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 32px;
+      margin-bottom: 18px;
+    }
+
+    &-ItemTitle {
+      @include fontSet("Mont Semi Bold", 14px);
+      line-height: 20px;
+    }
+
+    &-Image {
+      width: 27vw;
+      height: 22vw;
+
+      &::after {
+        width: 100px;
+        left: calc(50% - (100px / 2));
+        @include fontSet("Mont Semi Bold", 14px);
+        line-height: 20px;
+      }
+    }
+
+    .category-image {
+      width: 27vw;
+      height: 22vw;
+    }
+
+    &-Model {
+      margin-top: 18px;
+    }
+
+    &-CountModel {
+      @include fontSet("Mont Regular", 12px);
+      margin-top: 0;
+      line-height: 15px;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .Category {
+    width: $widthContentMobile;
+
+    &-List {
+      flex-direction: column;
+      width: $widthContentMobile;
+    }
+
+    &-Item:not(:last-child){
+      margin-bottom: 24px;
+    }
+
+    &-Image {
+      width: 272px;
+      height: 200px;
+
+      &::after {
+        @include fontSet("Mont Semi Bold", 16px);
+        line-height: 20px;
+        width: 130px;
+        left: calc(50% - (130px / 2));
+      }
+    }
+
+    .category-image {
+      width: 272px;
+      height: 200px;
+    }
+
+    &-Model {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+  }
+}

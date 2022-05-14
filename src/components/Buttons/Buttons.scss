@@ -1,0 +1,83 @@
+@import "../styles/main";
+
+.Buttons {
+  display: flex;
+  width: 100%;
+
+  &-ButtonAdd {
+    padding: 7px 46px;
+    border: 1px solid $colorPrimary;
+    @include fontSet("Mont Semi Bold", 14px);
+    text-align: center;
+    line-height: 14px;
+    color: $colorBackground;
+    background: $colorPrimary;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.35s;
+    flex-grow: 1;
+
+    &:hover {
+      color: $colorSelected;
+      border-color: $colorIcons;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: $colorBackground;
+      padding: 7px 46px;
+      z-index: -1;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: 100%;
+      transition: all 0.35s;
+    }
+
+    &:hover::after {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all 0.35s;
+    }
+  }
+
+  &-ButtonAdded {
+    height: 40px;
+    border: 1px solid $colorElements;
+    @include fontSet("Mont Semi Bold", 14px);
+    text-align: center;
+    line-height: 40px;
+    color: $colorSelected;
+    flex-grow: 1;
+    background: $colorBackground;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $colorPrimary;
+      cursor: not-allowed;
+    }
+  }
+
+  &-ButtonFavorites {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $colorIcons;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+    &_selected {
+      border-color: $colorElements;
+    }
+  }
+}

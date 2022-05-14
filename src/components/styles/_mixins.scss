@@ -1,0 +1,11 @@
+@mixin fontSet($famaly, $size) {
+  font-family: #{$famaly};
+  font-size: #{$size};
+}
+
+@mixin imageBackground($url) {
+  background-image: $url;
+  background-color: $backgroundColor;
+  background-position: center;
+  background-repeat: no-repeat;
+}

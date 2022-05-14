@@ -1,0 +1,331 @@
+[
+  { "type": "phones",
+    "models": "12",
+    "colors": [
+      ["Purple", "#b8afe6"],
+      ["Blue", "#013b63"],
+      ["Green", "#d7efd5"],
+      ["Red", "#d82f2d"],
+      ["White", "#f5f2ee"],
+      ["Black", "#25212b"]
+    ],
+    "options": ["64 GB", "128 GB", "256 GB"],
+    "specs":[
+      ["Resolution", "2532 × 1170"],
+      ["Processor", "Apple A14 Bionic"],
+      ["Camera", "12Mp + 12Мp + 12Мp"],
+      ["Zoom", "Optical, 2x"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "146.7 × 71.5 × 7.4 mm"],
+      ["Weight", "164 grams"]
+    ],
+    "about": [
+      ["A14 Bionic is the fastest chip in a smartphone", "And it pushes what’s possible. Like crunching trillions of operations on the Neural Engine. Or shooting in Dolby Vision — even pro movie cameras can’t do that. It’s superefficient for great battery life. And it’s ahead of its time, prepared to power pretty much anything that comes next."
+      ],
+      ["Super Retina XDR display Behold OLED", "Vastly more contrast. Incredible color accuracy. A huge jump in pixel density. Wow. Just wow. OLED delivers brighter brights, darker blacks, and higher resolution for everything you look at. This is the best iPhone display we’ve ever made, and it goes all the way to the edge."
+      ],
+      ["Video Low lights. Camera. Action", "How do you improve on the highest-quality video in a smartphone? Make it even better in low light — a full 27 percent better. That means no hour is off limits for more beautifully detailed video. Then there’s Night mode Time-lapse. Just prop up your iPhone and let the light trails begin."
+      ]
+    ]
+  },
+  { 
+    "type": "phones",
+    "models": "12 Pro",
+    "options": ["128 GB", "256 GB", "512 GB"],
+    "colors": [
+      ["Pacific Blue", "#405c6b"],
+      ["Gold", "#fcecd3"],
+      ["Graphite", "#52514c"],
+      ["Silver", "#e2e4de"]
+    ],
+    "specs":[
+      ["Resolution", "2532 × 1170"],
+      ["Processor", "Apple A14 Bionic"],
+      ["Camera", "12Mp + 12Мp + 12Мp"],
+      ["Zoom", "Optical, 2x"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "146.7 × 71.5 × 7.4 mm"],
+      ["Weight", "189 grams"]
+    ],
+    "about": [
+      ["Superfast wireless. Hello 5G", "5G transforms iPhone with accelerated wireless speeds and better performance on congested networks.5 Now you can download huge files on the go or stream high-quality HDR movies. Without. All. The. Lag. iPhone also has the most 5G bands of any smartphone so you get 5G in more places. And all that speed opens up amazing possibilities for the future of apps."
+      ],
+      ["The only thing even close was our last chip", "A14 Bionic is the first 5-nanometer chip in the industry, with advanced components literally atoms wide. Forty percent more transistors rev up speeds while increasing efficiency for great battery life. And a new ISP powers Dolby Vision recording — something no pro movie camera, let alone any other phone, can do."
+      ],
+      ["AR at the speed of light", "The LiDAR Scanner on iPhone 12 Pro measures how long it takes light to reflect back from objects, so it can create a depth map of any space you’re in. Because it’s ultrafast and accurate, AR apps can now transform a room into a realistic rainforest or show you exactly how a new sneaker will fit."
+      ]
+    ]
+  },
+  {
+    "type": "phones",
+    "models": "11 Pro",
+    "options": ["64 GB", "256 GB", "512 GB"],
+    "colors": [
+      ["Midnight Green", "#4e5850"],
+      ["Silver", "#ebebe3"],
+      ["Space Gray", "#535150"],
+      ["Gold", "#fad7bc"]
+    ],
+    "specs":[
+      ["Resolution", "2436 × 1125"],
+      ["Processor", "Apple A13 Bionic"],
+      ["Camera", "12Mp + 12Мp + 12Мp"],
+      ["Zoom", "Optical, 2x"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "144 × 71.4 × 8.1 mm"],
+      ["Weight", "188 grams"]
+    ],
+    "about": [
+      ["Design: An Obsession over Details", "Four new textured matt glass finishes and stainless-steel design. Featuring a 14.73cm (5.8) Super Retina XDR display, the iPhone 11 Pro is as beautiful as it gets. The IP68 rating ensures that is water-resistant up to 4 meters for 30 minutes."
+      ],
+      ["Three Cameras That Feel Like One", "The iPhone 11 Pro features Triple 12 MP Ultra Wide (13mm), Wide (26mm) and Telephoto (52mm) cameras. The Ultra wide camera provides 120° field of view, letting you capture four times more scene, and the wide camera provides 100% Focus Pixels and Optical image stabilisation and the telephoto camera comes with an f/2.0 aperture and 2x optical zoom."
+      ],
+      ["Lots More Power. Lots More Battery Life", "The fastest chip in a smartphone - A13 Bionic chip with Neural Engine. Fast-charge capable with the included 18 W adapter, the iPhone 11 Pro provides all-day battery life."
+      ]
+    ]
+  },
+  {
+    "type": "watches",
+    "models": "6",
+    "options": ["40mm", "44mm"],
+    "colors": [
+      ["Silver", "#e5e5e5"],
+      ["Space Gray", "#737275"],
+      ["Gold", "#eac6b5"],
+      ["Blue", "#115e93"],
+      ["Red", "#c41740"],
+      ["Black", "#25212b"]
+    ],
+    "specs":[
+      ["Processor", "S6 SiP"],
+      ["Capacity", "32 GB"],
+      ["Material", "Aluminum"],
+      ["Case size", "40mm, 44mm"],
+      ["Display", "Always-On Retina LTPO OLED"],
+      ["Cell", "LTE/UMTS"],
+      ["Connectivity", "GPS"]
+    ],
+    "about": [
+      ["Innovation That Only Benefits", "The Apple Watch Series 6 smartwatch has a ton of innovations to track and improve your health. Among them are most of the innovations that are associated with high-precision sensors and additional intelligent functions."
+      ],
+      ["A display that surprises every second", "The new Retina display is now brighter and clearer. Even in sunny weather, without lifting your wrist or squinting, you can easily view the time and other indicators on the inactive screen of your smart watch. Now there is no need to turn on the display to see the information you need."
+      ],
+      ["Sensational New Watch Faces", "The new series of smartwatches adds a variety of watch faces to match your style, sport, hobby and activity. Not only can you customize the watch faces yourself, but you can also share them with your friends."
+      ]
+    ]
+  },
+  {
+    "type": "watches",
+    "models": "6 LTE",
+    "options": ["40mm", "44mm"],
+    "colors": [
+      ["Silver", "#e5e5e5"],
+      ["Graphite", "#585551"],
+      ["Gold", "#e6caac"]
+    ],
+    "specs":[
+      ["Processor", "S6 SiP"],
+      ["Capacity", "32 GB"],
+      ["Material", "Stainless Steel"],
+      ["Case size", "40mm, 44mm"],
+      ["Display", "Always-On Retina LTPO OLED"],
+      ["Cell", "LTE/UMTS"],
+      ["Connectivity", "GPS + Cellular"]
+    ],
+    "about": [
+      ["Cellular connectivity on GPS + Cellular models", "With cellular connectivity activated on Apple Watch GPS + Cellular models, you can stay connected even when you don’t have your iPhone. Make calls, send texts, stream music, and do so much more using only your Apple Watch."
+      ],
+      ["Innovation That Only Benefits", "The Apple Watch Series 6 smartwatch has a ton of innovations to track and improve your health. Among them are most of the innovations that are associated with high-precision sensors and additional intelligent functions."
+      ],
+      ["New watch faces", "Get the latest watch faces that you can customize to suit your mood, your style, or your hobbies. Make your own unique watch face."
+      ]
+    ]
+  },
+  {
+    "type": "watches",
+    "models": "6 Nike+",
+    "options": ["40mm", "44mm"],
+    "colors": [
+      ["Silver", "#e5e5e5"],
+      ["Space Gray", "#737275"]
+    ],
+    "specs":[
+      ["Processor", "S6 SiP"],
+      ["Capacity", "32 GB"],
+      ["Material", "Aluminum"],
+      ["Case size", "40mm, 44mm"],
+      ["Display", "Always-On Retina LTPO OLED"],
+      ["Cell", "LTE/UMTS"],
+      ["Connectivity", "GPS"]
+    ],
+    "about": [
+      ["The run beckons", "Apple Watch Nike with the Nike Run Club app is your ultimate running partner. Exclusive Nike watch faces are now more customizable with modular complications. Streaks are the new brags. And with Nike Twilight Mode, any time is go time."
+      ],
+      ["Nike Run Club app", "Go further with the Nike Run Club app, redesigned for the way you run — it’s the starting line for the ultimate running experience."
+      ],
+      ["The highlight of your night", "In Nike Twilight Mode, the screen fills with solid color to help make you more visible. Stand out even more with Apple Watch Series 6. Its Always-On Retina display is now 2.5 times brighter outdoors when your wrist is down. Add a Nike Sport Loop band that’s woven with special reflective thread designed to shimmer when light strikes it."
+      ]
+    ]
+  },
+  {
+    "type": "watches",
+    "models": "SE",
+    "options": ["40mm", "44mm"],
+    "colors": [
+      ["Silver", "#e5e5e5"],
+      ["Space Gray", "#737275"],
+      ["Gold", "#eac6b5"]
+    ],
+    "specs":[
+      ["Processor", "S5 SiP"],
+      ["Capacity", "32 GB"],
+      ["Material", "Aluminum"],
+      ["Case size", "40mm, 44mm"],
+      ["Display", "Retina LTPO OLED"],
+      ["Cell", "LTE/UMTS"],
+      ["Connectivity", "GPS"]
+    ],
+    "about": [
+      ["On everyone’s watch list", "Same iconic design and large display as Apple Watch Series 6.Powerful S5 dual-core SiP for fast performance.Fall detection and Emergency SOS for your safety. Available with cellular to let you go without your phone."
+      ],
+      ["Come in, the water’s fine", "Apple Watch SE is water resistant 50 meters. So dive right in and start tracking your splits and sets in the pool, or even map your route in open water."
+      ],
+      ["A watch you can feel good about", "Apple Watch SE inspires a healthier life. It keeps you more informed and encourages better habits. It can monitor your heart rate and let you know if something is wrong so you can take action and consult a doctor. And can even call for help in an emergency."
+      ]
+    ]
+  },
+  {
+    "type": "tablets",
+    "models": "Air 4",
+    "options": ["64 GB", "256 GB"],
+    "colors": [
+      ["Silver", "#e2e3e4"],
+      ["Space Gray", "#68696d"],
+      ["Rose Gold", "#edc4c1"],
+      ["Green", "#ccdfc9"],
+      ["Sky Blue", "#cee3f6"]
+    ],
+    "specs":[
+      ["Resolution", "2360 × 1640"],
+      ["Processor", "Apple A14 Bionic"],
+      ["Camera", "12 Mp + 7 Мp"],
+      ["Display", "Liquid Retina"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "247.6 × 178.5 × 6.1 mm"],
+      ["Weight", "458 grams"]
+    ],
+    "about": [
+      ["Apple iPad Air 4 (2020)", "iPad Air 4 is a multifunctional device with a long list of cutting-edge technical specifications: a liquid Retina display with rich color reproduction, a powerful chipset with high performance, a camera with many shooting modes, a thin body, a large battery and much more."
+      ],
+      ["Display", "Apple iPad Air 4 (2020) has a Liquid Retina display and measures 10.9 inches. Among other things, the device has a high screen brightness, rich color reproduction and the widest color palette. All these characteristics combine to make the display picture incredibly detailed with incredible depth in every shade."
+      ],
+      ["Camera", "On the back of the Apple iPad Air 4 (2020) is the main camera module. It has 12 megapixels, f/1 and many supported shooting modes. Using the tablet camera, you can take breathtaking photos and videos. The front camera (7 megapixels) will allow you to take high-quality selfies and make video calls."
+      ]
+    ]
+  },
+  {
+    "type": "tablets",
+    "models": "8 10.2\"",
+    "options": ["32 GB", "128 GB"],
+    "colors": [
+      ["Silver", "#e2e3e4"],
+      ["Space Gray", "#68696d"],
+      ["Gold", "#f6ceb9"]
+    ],
+    "specs":[
+      ["Resolution", "2160 × 1620"],
+      ["Processor", "Apple A12 Bionic"],
+      ["Camera", "8 Mp + 1.2 Мp"],
+      ["Display", "Retina"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "250.6 × 174.1 × 7.5 mm"],
+      ["Weight", "495 grams"]
+    ],
+    "about": [
+      ["Apple iPad 8 (2020)", "Apple iPad 8 (2020) combines a compact size, a powerful processor and a wide range of possibilities for the realization of creative ideas. This model is perfect for discerning users who want the best of the best gadgets of the moment at a completely affordable price. The control system became available using touch or Apple Pencil, keyboard and trackpad. This one is perfect!"
+      ],
+      ["Display", "Apple iPad 8 (2020) features a 10.2-inch Retina display that reproduces colors accurately and vividly. The oleophobic coating will protect your device's screen from smudges and fingerprints during use. The display responds quickly to your taps for smooth lines when using Apple Pencil."
+      ],
+      ["Powerful processor", "The all-new A12 Bionic processor delivers improved performance to the Apple iPad 8 (2020) than its predecessor. Now only you control the process and nothing can interfere with your flight of thought and creativity."
+      ]
+    ]
+  },
+  {
+    "type": "tablets",
+    "models": "Pro 11\"",
+    "options": ["128 GB", "256 GB", "512 GB"],
+    "colors": [
+      ["Silver", "#e2e3e4"],
+      ["Space Gray", "#68696d"]
+    ],
+    "specs":[
+      ["Resolution", "2388 × 1668"],
+      ["Processor", "Apple A12Z Bionic"],
+      ["Camera", "12 Mp + 10 Мp + 7 Mp"],
+      ["Display", "Liquid Retina"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "247.6 × 178.5 × 5.9 mm"],
+      ["Weight", "473 grams"]
+    ],
+    "about": [
+      ["Unique display", "The mini LED display Apple iPad Pro 11\" (2020) not only conveys all colors and shades, but also responds to your every touch, providing smooth lines when drawing with Apple Pencil, as well as quick answers to your requests to open applications or movement in games.A special screen coating gently protects your eyes from overstrain."
+      ],
+      ["Improved camera", "The camera of the Apple iPad Pro 11\" (2020) seems like a real monster, because its two-module design provides excellent capture, and the optional Time of Flight function allows you to use augmented reality technology, which adds to the thrill of games. Also, the new Apple iPad Pro 11\" (2020) is equipped with a night mode so that you can create your masterpieces anytime, anywhere."
+      ],
+      ["Powerful processor", "The all-new A13X processor delivers improved performance to the Apple iPad Pro 11\" (2020) than its predecessor. Now you are in control and nothing can stop your thoughts and creativity."
+      ]
+    ]
+  },
+  {
+    "type": "tablets",
+    "models": "Pro 12.9\"",
+    "options": ["128 GB", "256 GB", "512 GB"],
+    "colors": [
+      ["Silver", "#e2e3e4"],
+      ["Space Gray", "#68696d"]
+    ],
+    "specs":[
+      ["Resolution", "2732 × 2048"],
+      ["Processor", "Apple A12Z Bionic"],
+      ["Camera", "12 Mp + 10 Мp + 7Mp"],
+      ["Display", "Liquid Retina"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "280.6 × 214.9 × 5.9 mm"],
+      ["Weight", "641 grams"]
+    ],
+    "about": [
+      ["Unique display", "The mini LED display Apple iPad Pro 12.9\" (2020) not only conveys all colors and shades, but also responds to your every touch, providing smooth lines when drawing with Apple Pencil, as well as quick answers to your requests to open applications or movement in games.A special screen coating gently protects your eyes from overstrain."
+      ],
+      ["Improved camera", "The camera of the Apple iPad Pro 12.9\" (2020) looks like a real monster, with its dual-module design providing excellent capture, and the optional Time of Flight feature allows for augmented reality technology to add a thrill to games. Also the new Apple iPad Pro 12.9\" (2020) is equipped with a night mode so that you can create your masterpieces anytime, anywhere."
+      ],
+      ["Powerful processor", "The all-new A13X processor delivers improved performance to the Apple iPad Pro 12.9\" (2020) than its predecessor. Now you are in control and nothing can stop your thoughts and creativity."
+      ]
+    ]
+  },
+  {
+    "type": "tablets",
+    "models": "Pro 12.9\" M1",
+    "options": ["128 GB", "256 GB", "512 GB"],
+    "colors": [
+      ["Silver", "#e2e3e4"],
+      ["Space Gray", "#68696d"]
+    ],
+    "specs":[
+      ["Resolution", "2732 × 2048"],
+      ["Processor", "Apple A12Z Bionic"],
+      ["Camera", "12 Mp + 10 Мp + 12Mp"],
+      ["Display", "Liquid Retina XDR"],
+      ["Cell", "GSM/EDGE, UMTS/HSPA+"],
+      ["Size", "280.6 × 214.9 × 6.4 mm"],
+      ["Weight", "682 grams"]
+    ],
+    "about": [
+      ["The improved display", "iPad Pro (2021) comes with 12.9-inch Mini-Led displays. This change forced Apple to ditch LCDs, resulting in better contrast ratios, more accurate black tones, and improved brightness. This is made possible by the smaller LEDs, as the name suggests for the mini LED."
+      ],
+      ["New iPad Pro 2021 M1 Chip", "There have been plenty of rumors about what processor the new iPad will be powered on. The end result is the A14X processor, which is based on the Apple M1 chip. The M1 chip is the technology that powers the latest Macs released. Such an update means that from now on, only you are in charge of the entire process of working on the tablet and nothing can stop you from easily and quickly coping with the tasks."
+      ],
+      ["Thunderbolt. 5G Support", "The new iPad Pro has a Thunderbolt connector. This implementation allows it to be used with an external display, hard drives and other peripherals. The port looks exactly the same, so all cables are compatible. 5G technology will allow you to take advantage of the faster network data services that are currently under development."
+      ]
+    ]
+  }
+]

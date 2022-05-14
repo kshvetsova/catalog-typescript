@@ -1,0 +1,104 @@
+@import "../styles/main";
+
+.ProductsSlider {
+  display: flex;
+  width: $widthContent;
+  margin: 80px auto;
+  flex-direction: column;
+
+  &-Container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &-Title {
+    @include fontSet("Mont Bold", 32px);
+    color: $colorPrimary;
+    line-height: 40px;
+  }
+
+  &-Slider {
+    display: flex;
+    overflow: hidden;
+    height: 507px;
+  }
+
+  &-Content {
+    display: flex;
+    height: 507px;
+    transition: margin-left 250ms;
+  }
+
+  &-Product {
+    width: 272px;
+    height: 507px;
+  }
+}
+
+.ButtonsBlock {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+
+  &-Slider {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $colorIcons;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $colorBackground;
+
+    &:hover {
+      border-color: $colorPrimary;
+    }
+    &_next {
+      background-image: url("../icons/next.svg");
+      transition: border-color 0.3s;
+
+      &:disabled {
+        background-image: url("../icons/next-disabled.svg");
+        border-color: $colorElements;
+        cursor: not-allowed;
+      }
+    }
+
+    &_prev {
+      background-image: url("../icons/prev.svg");
+      transition: border-color 0.3s;
+      margin-right: 15px;
+
+      &:disabled {
+        background-image: url("../icons/prev-disabled.svg");
+        border-color: $colorElements;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .ProductsSlider {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    &-Title {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 32px;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .ProductsSlider {
+    width: calc(100vw - 49px);
+  }
+}
+
+@media (max-width: 325px) {
+  .ProductsSlider {
+    width: $widthContentMobile;
+  }
+}

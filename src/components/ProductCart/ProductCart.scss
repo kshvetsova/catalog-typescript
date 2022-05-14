@@ -1,0 +1,161 @@
+@import "../styles/main";
+
+.ProductCart {
+  display: flex;
+  width: 52.2vw;
+  border: 1px solid $colorElements;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 40px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  margin-bottom: 8px;
+  margin-right: 1.1vw;
+  height: 130px;
+
+  &-ContainerRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  &-ContainerLeft {
+    display: flex;
+    max-width: 470px;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &-ContainerQuantity {
+    display: flex;
+    width: 96px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+  }
+
+  &-Close {
+    width: 16px;
+    height: 16px;
+    background-image: url("../icons/close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
+
+    &:hover {
+      background-image: url("../icons/close-hover.svg");
+    }
+  }
+
+  &-Image {
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin: 0 31px;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+
+  &-Name,
+  &-Quantity {
+    @include fontSet("Mont Regular", 14px);
+    color: $colorPrimary;
+    line-height: 18px;
+  }
+
+  &-Name {
+    display: flex;
+    height: 100%;
+    width: 50%;
+  }
+
+  .buttonProduct {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $colorIcons;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: border-color 0.3s;
+
+    &:hover:not(:disabled) {
+      border-color: $colorPrimary;
+    }
+  }
+
+  &-Add {
+    background-image: url("../icons/plus.svg");
+  }
+
+  &-Remove {
+    background-image: url("../icons/minus.svg");
+    &:disabled {
+      background-image: url("../icons/minus-disabled.svg");
+      border-color: $colorElements;
+      cursor: not-allowed;
+    }
+  }
+
+  &-Price {
+    @include fontSet("Mont Bold", 22px);
+    color: $colorPrimary;
+    line-height: 30px;
+    width: 61px;
+  }
+}
+
+@media (max-width: $breakPointTablet) {
+  .ProductCart {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .ProductCart {
+    padding: 20px;
+
+    &-Image {
+      margin: 0 24px;
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .ProductCart {
+    flex-direction: column-reverse;
+    margin-bottom: 24px;
+    height: 100%;
+    min-height: 172px;
+
+    &-Name {
+      align-items: center;
+    }
+
+    &-ContainerRight,
+    &-ContainerLeft {
+      width: 100%;
+    }
+
+    &-ContainerRight {
+      flex-direction: row-reverse;
+      margin-bottom: 8px;
+    }
+
+    &-ContainerQuantity {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .ProductCart {
+    min-height: 202px;
+    &-Name {
+      @include fontSet("Mont Regular", 13px);
+      line-height: 15px;
+    }
+  }
+}

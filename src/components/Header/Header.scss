@@ -1,0 +1,165 @@
+@import "../styles/main";
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 0 0 $colorElements;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &-SectionLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+  }
+
+  .NavListLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-LinkItem {
+      color: $colorSecondary;
+      @include fontSet("Mont Bold", 12px);
+      margin-left: 4.5vw;
+      position: relative;
+      line-height: 11px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+
+    .active {
+      color: $colorPrimary;
+    }
+
+    .active::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: $colorPrimary;
+      width: 100%;
+      top: 34px;
+
+      @media (max-width: $breakPointTablet) {
+        top: 18px;
+      }
+    }
+  }
+
+  &-SectionRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    @media (max-width: $breakPointMobileSmall) {
+      flex-grow: 1;
+    }
+  }
+
+  .NavListRight {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &-Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 100%;
+      box-shadow: -1px 0 0 0 $colorElements;
+      position: relative;
+    }
+
+    &-NavContent {
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    .active {
+      color: $colorPrimary;
+    }
+
+    .active::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: $colorPrimary;
+      width: 64px;
+      left: 0;
+      bottom: 0;
+    }
+
+    &-ItemCount {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      line-height: 14px;
+      top: -7px;
+      right: -6px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $colorBackground;
+      border-radius: 20px;
+      background: $colorCount;
+      @include fontSet("Mont Semi Bold", 9px);
+      color: $colorBackground;
+    }
+  }
+}
+
+.Logo {
+  margin-left: 24px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: $breakPointTablet) {
+  .Header {
+    height: 54px;
+    margin-bottom: 34px;
+
+    .NavListLeft {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 34px;
+      top: 54px;
+      left: 0;
+      right: 0;
+      padding: 0 24px;
+      background: rgba(226, 230, 233, 0.95);
+
+      &-LinkItem {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .Logo {
+    margin-right: 24px;
+  }
+}

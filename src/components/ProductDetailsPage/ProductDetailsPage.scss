@@ -1,0 +1,505 @@
+@import "../styles/main";
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  width: $widthContent;
+  margin: 0 auto;
+  justify-content: start;
+  margin-top: 24px;
+
+  &-ContainerTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+
+  &-ContainerBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-ContainerOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    position: relative;
+  }
+
+  .Breadcrumbs {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    &-List {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 16px;
+      margin-bottom: 40px;
+    }
+
+    &-Item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 16px;
+      @include fontSet("Mont Semi Bold", 12px);
+      color: $colorSecondary;
+      line-height: 15.3px;
+
+      &:nth-child(3) {
+        color: $colorPrimary;
+      }
+    }
+  }
+
+  &-Title {
+    @include fontSet("Mont Bold", 32px);
+    color: $colorPrimary;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+
+  .BlockImages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 49%;
+
+    &-List {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item_size:nth-child(3),
+    .item_tablets:nth-child(3),
+    .item_size:nth-child(4) {
+      padding: 7px;
+    }
+
+    .item_tablets:nth-child(4) {
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    &-Item {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      padding: 7px;
+      border: 1px solid $colorElements;
+      cursor: pointer;
+      transition: border-color 0.3s;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: 80px;
+        height: 80px;
+        padding-left: 14px;
+        padding-top: 14px;
+        padding-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        border-color: $colorIcons;
+      }
+    }
+
+    .item_active {
+      border-color: $colorPrimary;
+    }
+
+    &-Preview {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+
+  .BlockOptions {
+    width: 312px;
+
+    &-Buttons_gap {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .Colors {
+    margin-bottom: 49px;
+
+    &-Title {
+      @include fontSet("Mont Semi Bold", 12px);
+      color: $colorSecondary;
+      margin-bottom: 8px;
+    }
+
+    &-List {
+      display: flex;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $colorElements;
+        top: calc(100% + 24px);
+        left: 0;
+      }
+    }
+
+    .color {
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+    }
+
+    &-Item {
+      width: 32px;
+      height: 32px;
+      border-radius: 20px;
+      border: 1px solid $colorElements;
+      position: relative;
+      margin-right: 9px;
+      cursor: pointer;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: $colorIcons;
+      }
+    }
+
+    .color_active {
+      border-color: $colorPrimary;
+    }
+  }
+
+  .Options {
+    margin-bottom: 57px;
+
+    &-Title {
+      @include fontSet("Mont Semi Bold", 12px);
+      color: $colorSecondary;
+      margin-bottom: 8px;
+    }
+
+    &-List {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $colorElements;
+        top: calc(100% + 24px);
+        left: 0;
+      }
+    }
+
+    .option_active {
+      background: $colorPrimary;
+      color: $colorBackground;
+      border-color: $colorPrimary;
+    }
+
+    &-Item {
+      width: 56px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      @include fontSet("Mont Regular", 14px);
+      color: $colorPrimary;
+      border: 1px solid $colorIcons;
+      transition: border-color 0.3s;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        border-color: $colorPrimary;
+      }
+    }
+  }
+
+  .price {
+    @include fontSet("Mont Bold", 32px);
+    line-height: 40px;
+  }
+
+  &-ProductId {
+    @include fontSet("Mont Semi Bold", 12px);
+    color: $colorIcons;
+    white-space: nowrap;
+  }
+
+  .About {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 49%;
+
+    &-Title {
+      @include fontSet("Mont Bold", 22px);
+      color: $colorPrimary;
+      line-height: 30px;
+      position: relative;
+      width: 100%;
+      margin-bottom: 48px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        color: $colorElements;
+        background: $colorElements;
+        top: 46px;
+        left: 0;
+      }
+    }
+
+    &-Item {
+      @include fontSet("Mont Regular", 14px);
+      color: $colorSecondary;
+      line-height: 21px;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-ItemTitle {
+      margin-bottom: 16px;
+      @include fontSet("Mont Semi Bold", 20px);
+      line-height: 25px;
+      color: $colorPrimary;
+    }
+  }
+
+  .TechSpecs {
+    width: 45%;
+
+    &-Title {
+      @include fontSet("Mont Bold", 22px);
+      color: $colorPrimary;
+      line-height: 30px;
+      position: relative;
+      width: 100%;
+      margin-bottom: 48px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        color: $colorElements;
+        background: $colorElements;
+        top: 46px;
+        left: 0;
+      }
+    }
+
+    &-Item {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      line-height: 21px;
+      border-bottom: 1px dashed $colorElements;
+    }
+
+    &-Name {
+      color: $colorSecondary;
+      @include fontSet("Mont Regular", 14px);
+    }
+
+    &-Value {
+      @include fontSet("Mont Regular", 14px);
+      color: $colorPrimary;
+    }
+  }
+}
+
+.Back {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  margin-bottom: 16px;
+
+  &-Button {
+    color: $colorSecondary;
+    margin-left: 10px;
+    @include fontSet("Mont Semi Bold", 12px);
+    line-height: 15.3px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+@media (max-width: $breakPointTablet) {
+  .ProductDetailsPage {
+    &-ProductId {
+      position: absolute;
+      right: 0;
+    }
+
+    .BlockImages {
+      width: 52%;
+
+      &-Item {
+        margin-bottom: 8px;
+      }
+
+      &-Preview {
+        width: 35vw;
+        height: 35vw;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .ProductDetailsPage {
+    width: $widthContent;
+
+    &-ContainerTop {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    &-ContainerOptions {
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    &-ContainerBottom {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .Back {
+      margin-bottom: 24px;
+    }
+
+    .Breadcrumbs {
+      &-List {
+        margin-bottom: 24px;
+      }
+
+      &-Item:nth-child(5) {
+        display: flex;
+        height: 16px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .BlockImages {
+      width: 100%;
+      margin-bottom: 32px;
+      justify-content: space-around;
+
+      &-Item {
+        margin-bottom: 8px;
+      }
+
+      &-Preview {
+        width: 64%;
+        height: 64%;
+      }
+    }
+
+    .About {
+      width: 100%;
+    }
+
+    .TechSpecs {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &-Title {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
+
+    .price {
+      @include fontSet("Mont Bold", 25px);
+      line-height: 25px;
+    }
+
+    .About-Item:last-child {
+      margin-bottom: 8px;
+    }
+
+    .About-ItemTitle {
+      @include fontSet("Mont Semi Bold", 18px);
+    }
+  }
+}
+
+@media (max-width: $breakPointMobileSmall) {
+  .ProductDetailsPage {
+    width: $widthContentMobile;
+
+    &-ContainerOptions {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .BlockOptions {
+      width: 100%;
+    }
+
+    &-ProductId {
+      align-self: flex-end;
+      position: relative;
+      top: 0;
+    }
+
+    .BlockImages {
+      margin-bottom: 16px;
+      justify-content: space-between;
+      &-Item:nth-child(4),
+      &-Item:nth-child(5) {
+        display: none;
+      }
+
+      &-Item:nth-child(3) {
+        margin-bottom: 0;
+      }
+
+      &-Preview {
+        width: 70%;
+        height: 70%;
+      }
+    }
+
+    .Back {
+      margin-bottom: 32px;
+    }
+  }
+}

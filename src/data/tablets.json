@@ -1,0 +1,682 @@
+[
+  {
+    "id": 60769,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 64GB Space Gray (MYFM2)",
+    "color": "Space Gray",
+    "option": "64 GB",
+    "price": [629, 688],
+    "images": [
+      "img/ipad-air-4/space_gray-1.jpg",
+      "img/ipad-air-4/space_gray-2.jpg",
+      "img/ipad-air-4/space_gray-3.jpg",
+      "img/ipad-air-4/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "64 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60768,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 64GB Silver (MYFN2)",
+    "color": "Silver",
+    "option": "64 GB",
+    "price": [640],
+    "images": [
+      "img/ipad-air-4/silver-1.jpg",
+      "img/ipad-air-4/silver-2.jpg",
+      "img/ipad-air-4/silver-3.jpg",
+      "img/ipad-air-4/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "64 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60770,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 64GB Rose Gold (MYFP2)",
+    "color": "Rose Gold",
+    "option": "64 GB",
+    "price": [660, 707],
+    "images": [
+      "img/ipad-air-4/rose_gold-1.jpg",
+      "img/ipad-air-4/rose_gold-2.jpg",
+      "img/ipad-air-4/rose_gold-3.jpg",
+      "img/ipad-air-4/rose_gold-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "64 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60771,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 64GB Green (MYFR2)",
+    "color": "Green",
+    "option": "64 GB",
+    "price": [681],
+    "images": [
+      "img/ipad-air-4/green-1.jpg",
+      "img/ipad-air-4/green-2.jpg",
+      "img/ipad-air-4/green-3.jpg",
+      "img/ipad-air-4/green-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "64 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60772,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 64GB Sky Blue (MYFQ2)",
+    "color": "Sky Blue",
+    "option": "64 GB",
+    "price": [635, 714],
+    "images": [
+      "img/ipad-air-4/sky_blue-1.jpg",
+      "img/ipad-air-4/sky_blue-2.jpg",
+      "img/ipad-air-4/sky_blue-3.jpg",
+      "img/ipad-air-4/sky_blue-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "64 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60778,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 256GB Space Gray (MYFT2)",
+    "color": "Space Gray",
+    "option": "256 GB",
+    "price": [806],
+    "images": [
+      "img/ipad-air-4/space_gray-1.jpg",
+      "img/ipad-air-4/space_gray-2.jpg",
+      "img/ipad-air-4/space_gray-3.jpg",
+      "img/ipad-air-4/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60777,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 256GB Silver (MYFW2)",
+    "color": "Silver",
+    "option": "256 GB",
+    "price": [780, 832],
+    "images": [
+      "img/ipad-air-4/silver-1.jpg",
+      "img/ipad-air-4/silver-2.jpg",
+      "img/ipad-air-4/silver-3.jpg",
+      "img/ipad-air-4/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60776,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 256GB Rose Gold (MYFX2)",
+    "color": "Rose Gold",
+    "option": "256 GB",
+    "price": [832],
+    "images": [
+      "img/ipad-air-4/rose_gold-1.jpg",
+      "img/ipad-air-4/rose_gold-2.jpg",
+      "img/ipad-air-4/rose_gold-3.jpg",
+      "img/ipad-air-4/rose_gold-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60775,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 256GB Green (MYG02)",
+    "color": "Green",
+    "option": "256 GB",
+    "price": [819, 886],
+    "images": [
+      "img/ipad-air-4/green-1.jpg",
+      "img/ipad-air-4/green-2.jpg",
+      "img/ipad-air-4/green-3.jpg",
+      "img/ipad-air-4/green-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 60774,
+    "type": "tablets",
+    "model": "Air 4",
+    "name": "Apple iPad Air 4 Wi-Fi 256GB Sky Blue (MYFY2)",
+    "color": "Sky Blue",
+    "option": "256 GB",
+    "price": [1005],
+    "images": [
+      "img/ipad-air-4/sky_blue-1.jpg",
+      "img/ipad-air-4/sky_blue-2.jpg",
+      "img/ipad-air-4/sky_blue-3.jpg",
+      "img/ipad-air-4/sky_blue-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 64993,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 128GB Space Gray (MHQR3)",
+    "color": "Space Gray",
+    "option": "128 GB",
+    "price": [950],
+    "images": [
+      "img/ipad-pro-12.9-M1/space_gray-1.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-2.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 64992,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 128GB Silver (MHQT3)",
+    "color": "Silver",
+    "option": "128 GB",
+    "price": [956],
+    "images": [
+      "img/ipad-pro-12.9-M1/silver-1.jpg",
+      "img/ipad-pro-12.9-M1/silver-2.jpg",
+      "img/ipad-pro-12.9-M1/silver-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 64997,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 256GB Space Gray (MHQU3)",
+    "color": "Space Gray",
+    "option": "256 GB",
+    "price": [970, 1303],
+    "images": [
+      "img/ipad-pro-12.9-M1/space_gray-1.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-2.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 64996,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 256GB Silver (MHQV3)",
+    "color": "Silver",
+    "option": "256 GB",
+    "price": [979, 1022],
+    "images": [
+      "img/ipad-pro-12.9-M1/silver-1.jpg",
+      "img/ipad-pro-12.9-M1/silver-2.jpg",
+      "img/ipad-pro-12.9-M1/silver-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 65001,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 512GB Space Gray (MHQW3)",
+    "color": "Space Gray",
+    "option": "512 GB",
+    "price": [1310],
+    "images": [
+      "img/ipad-pro-12.9-M1/space_gray-1.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-2.jpg",
+      "img/ipad-pro-12.9-M1/space_gray-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 65000,
+    "type": "tablets",
+    "model": "Pro 12.9\" M1",
+    "name": "Apple iPad Pro 12.9\" M1 Wi-Fi 512GB Silver (MHQX3)",
+    "color": "Silver",
+    "option": "512 GB",
+    "price": [1564],
+    "images": [
+      "img/ipad-pro-12.9-M1/silver-1.jpg",
+      "img/ipad-pro-12.9-M1/silver-2.jpg",
+      "img/ipad-pro-12.9-M1/silver-3.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "5th"]
+    ]
+  },
+  {
+    "id": 58336,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 128GB Space Gray (MY2H2)",
+    "color": "Space Gray",
+    "option": "128 GB",
+    "price": [1055],
+    "images": [
+      "img/ipad-pro-12.9/space_gray-1.jpg",
+      "img/ipad-pro-12.9/space_gray-2.jpg",
+      "img/ipad-pro-12.9/space_gray-3.jpg",
+      "img/ipad-pro-12.9/space_gray-4.jpg",
+      "img/ipad-pro-12.9/space_gray-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58328,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 128GB Silver (MY2J2)",
+    "color": "Silver",
+    "option": "128 GB",
+    "price": [999],
+    "images": [
+      "img/ipad-pro-12.9/silver-1.jpg",
+      "img/ipad-pro-12.9/silver-2.jpg",
+      "img/ipad-pro-12.9/silver-3.jpg",
+      "img/ipad-pro-12.9/silver-4.jpg",
+      "img/ipad-pro-12.9/silver-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58337,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 256GB Space Gray (MXAT2)",
+    "color": "Space Gray",
+    "option": "256 GB",
+    "price": [1040, 1134],
+    "images": [
+      "img/ipad-pro-12.9/space_gray-1.jpg",
+      "img/ipad-pro-12.9/space_gray-2.jpg",
+      "img/ipad-pro-12.9/space_gray-3.jpg",
+      "img/ipad-pro-12.9/space_gray-4.jpg",
+      "img/ipad-pro-12.9/space_gray-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58329,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 256GB Silver (MXAU2)",
+    "color": "Silver",
+    "option": "256 GB",
+    "price": [959, 1078],
+    "images": [
+      "img/ipad-pro-12.9/silver-1.jpg",
+      "img/ipad-pro-12.9/silver-2.jpg",
+      "img/ipad-pro-12.9/silver-3.jpg",
+      "img/ipad-pro-12.9/silver-4.jpg",
+      "img/ipad-pro-12.9/silver-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58338,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 512GB Space Gray (MXAV2)",
+    "color": "Space Gray",
+    "option": "512 GB",
+    "price": [1100, 1269],
+    "images": [
+      "img/ipad-pro-12.9/space_gray-1.jpg",
+      "img/ipad-pro-12.9/space_gray-2.jpg",
+      "img/ipad-pro-12.9/space_gray-3.jpg",
+      "img/ipad-pro-12.9/space_gray-4.jpg",
+      "img/ipad-pro-12.9/space_gray-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58330,
+    "type": "tablets",
+    "model": "Pro 12.9\"",
+    "name": "Apple iPad Pro 12.9\" Wi-Fi 512GB Silver (MXAW2)",
+    "color": "Silver",
+    "option": "512 GB",
+    "price": [1120, 1269],
+    "images": [
+      "img/ipad-pro-12.9/silver-1.jpg",
+      "img/ipad-pro-12.9/silver-2.jpg",
+      "img/ipad-pro-12.9/silver-3.jpg",
+      "img/ipad-pro-12.9/silver-4.jpg",
+      "img/ipad-pro-12.9/silver-5.jpg"
+    ],
+    "tech": [
+      ["Screen", "12.9\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "4th"]
+    ]
+  },
+  {
+    "id": 58316,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 128GB Space Gray (MY232)",
+    "color": "Space Gray",
+    "option": "128 GB",
+    "price": [815, 1026],
+    "images": [
+      "img/ipad-pro-11/space_gray-1.jpg",
+      "img/ipad-pro-11/space_gray-2.jpg",
+      "img/ipad-pro-11/space_gray-3.jpg",
+      "img/ipad-pro-11/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 58312,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 128GB Silver (MY252)",
+    "color": "Silver",
+    "option": "128 GB",
+    "price": [789],
+    "images": [
+      "img/ipad-pro-11/silver-1.jpg",
+      "img/ipad-pro-11/silver-2.jpg",
+      "img/ipad-pro-11/silver-3.jpg",
+      "img/ipad-pro-11/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 58317,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 256GB Space Gray (MXDC2)",
+    "color": "Space Gray",
+    "option": "256 GB",
+    "price": [919],
+    "images": [
+      "img/ipad-pro-11/space_gray-1.jpg",
+      "img/ipad-pro-11/space_gray-2.jpg",
+      "img/ipad-pro-11/space_gray-3.jpg",
+      "img/ipad-pro-11/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 58313,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 256GB Silver (MXDD2)",
+    "color": "Silver",
+    "option": "256 GB",
+    "price": [949],
+    "images": [
+      "img/ipad-pro-11/silver-1.jpg",
+      "img/ipad-pro-11/silver-2.jpg",
+      "img/ipad-pro-11/silver-3.jpg",
+      "img/ipad-pro-11/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "256 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 58318,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 512GB Space Gray (MXDE2)",
+    "color": "Space Gray",
+    "option": "512 GB",
+    "price": [939,1078],
+    "images": [
+      "img/ipad-pro-11/space_gray-1.jpg",
+      "img/ipad-pro-11/space_gray-2.jpg",
+      "img/ipad-pro-11/space_gray-3.jpg",
+      "img/ipad-pro-11/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 58314,
+    "type": "tablets",
+    "model": "Pro 11\"",
+    "name": "Apple iPad Pro 11\" Wi-Fi 512GB Silver (MXDF2)",
+    "color": "Silver",
+    "option": "512 GB",
+    "price": [1040, 1123],
+    "images": [
+      "img/ipad-pro-11/silver-1.jpg",
+      "img/ipad-pro-11/silver-2.jpg",
+      "img/ipad-pro-11/silver-3.jpg",
+      "img/ipad-pro-11/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "11\" OLED"],
+      ["Capacity", "512 GB"],
+      ["Generation", "2nd"]
+    ]
+  },
+  {
+    "id": 60780,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 32GB Space Gray (MYL92)",
+    "color": "Space Gray",
+    "option": "32 GB",
+    "price": [413],
+    "images": [
+      "img/ipad-8-10.2/space_gray-1.jpg",
+      "img/ipad-8-10.2/space_gray-2.jpg",
+      "img/ipad-8-10.2/space_gray-3.jpg",
+      "img/ipad-8-10.2/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "32 GB"],
+      ["Generation", "8th"]
+    ]
+  },
+  {
+    "id": 60779,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 32GB Silver (MYLA2)",
+    "color": "Silver",
+    "option": "32 GB",
+    "price": [413],
+    "images": [
+      "img/ipad-8-10.2/silver-1.jpg",
+      "img/ipad-8-10.2/silver-2.jpg",
+      "img/ipad-8-10.2/silver-3.jpg",
+      "img/ipad-8-10.2/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "32 GB"],
+      ["Generation", "8th"]
+    ]
+  },
+  {
+    "id": 60781,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 32GB Gold (MYLC2)",
+    "color": "Gold",
+    "option": "32 GB",
+    "price": [413],
+    "images": [
+      "img/ipad-8-10.2/gold-1.jpg",
+      "img/ipad-8-10.2/gold-2.jpg",
+      "img/ipad-8-10.2/gold-3.jpg",
+      "img/ipad-8-10.2/gold-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "32 GB"],
+      ["Generation", "8th"]
+    ]
+  },
+  {
+    "id": 60784,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 128GB Space Gray (MYLD2)",
+    "color": "Space Gray",
+    "option": "128 GB",
+    "price": [569, 577],
+    "images": [
+      "img/ipad-8-10.2/space_gray-1.jpg",
+      "img/ipad-8-10.2/space_gray-2.jpg",
+      "img/ipad-8-10.2/space_gray-3.jpg",
+      "img/ipad-8-10.2/space_gray-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "8th"]
+    ]
+  },
+  {
+    "id": 60783,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 128GB Silver (MYLE2)",
+    "color": "Silver",
+    "option": "128 GB",
+    "price": [569, 577],
+    "images": [
+      "img/ipad-8-10.2/silver-1.jpg",
+      "img/ipad-8-10.2/silver-2.jpg",
+      "img/ipad-8-10.2/silver-3.jpg",
+      "img/ipad-8-10.2/silver-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "8th"]
+    ]
+  },
+  {
+    "id": 60782,
+    "type": "tablets",
+    "model": "8 10.2\"",
+    "name": "Apple iPad 8 10.2\" Wi-Fi 128GB Gold (MYLF2)",
+    "color": "Gold",
+    "option": "128 GB",
+    "price": [569, 577],
+    "images": [
+      "img/ipad-8-10.2/gold-1.jpg",
+      "img/ipad-8-10.2/gold-2.jpg",
+      "img/ipad-8-10.2/gold-3.jpg",
+      "img/ipad-8-10.2/gold-4.jpg"
+    ],
+    "tech": [
+      ["Screen", "10.2\" OLED"],
+      ["Capacity", "128 GB"],
+      ["Generation", "8th"]
+    ]
+  }
+]

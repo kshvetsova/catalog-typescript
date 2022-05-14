@@ -1,0 +1,31 @@
+@import "../styles/main.scss";
+
+.Layout {
+  position: relative;
+
+  &-Main {
+    background: #fff;
+    min-height: 79.5vh;
+    margin-bottom: 97px;
+    padding-bottom: 1px;
+    padding-left: 24px;
+    padding-right: 24px;
+    z-index: 1;
+    box-shadow: 0 1px 0 0 $colorElements;
+    overflow: hidden;
+
+    @media (max-width: $breakPointTablet) {
+      min-height: 76.5vh;
+    }
+
+    @media (max-width: $breakPointMobile) {
+      margin-bottom: 77px;
+      min-height: 79vh;
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: $breakPointMobileSmall) {
+      min-height: 80vh;
+    }
+  }
+}
