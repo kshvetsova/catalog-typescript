@@ -1,4 +1,4 @@
-# Products catalog
+# Catalog
 [DEMO LINK](https://kshvetsova.github.io/catalog-typescript/)
 
 Implemented Products catalog following [this design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?node-id=1%3A2).
