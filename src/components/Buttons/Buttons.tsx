@@ -44,7 +44,7 @@ export const Buttons = React.memo(({ id, price, name, image }: Item) => {
         <button
           type="button"
           className="Buttons-ButtonFavorites Buttons-ButtonFavorites_selected"
-          onClick={() => setFavorites(favorites.filter((item: Item) => item.id !== id))}
+          onClick={() => setFavorites(favorites.filter((item: number) => item !== id))}
         >
           <img src="./img/icons-page/favorites-selected.svg" alt="Favorites"/>
         </button>
