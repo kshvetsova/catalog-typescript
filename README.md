@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Products catalog
+[DEMO LINK](https://kshvetsova.github.io/catalog-typescript/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Implemented Products catalog following [this design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?node-id=1%3A2).
+The design 1440px, adaptive for: 
+- Notebook 1280px
+- Tablet 768px
+- Mobile (> 320px)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+### App
+1. Added a `Header` with links to all the pages
+    - The `Logo` and the `Nav` are aligned left
+    - The `Favorites` and the `Cart` are aligned right
+1. Used `NavLink`s to highlight current page in `Header`
+1. Added `Footer`
+    - Footer content is limited the same width as the page content
+    - Added the link to the Github repo
+    - Implemented `Back to top` button
 
-### `npm start`
+### Home page
+1. Created `HomePage` available at `/` with just a title `Home page`
+1. Created `ProductsSlider` component and used it in `Hot prices` block
+    - Created `ProductCard` component to used it everywhere
+    - Added ability to used `<` and `>` buttons to scroll products
+1. Added `Brand new` block using `ProductsSlider`
+1. Added `Shop by category` block with the links to `/phones`, `/tablets` and `/watches`.
+1. Replaced the `Home page` title with slider
+    - User can change pictures with buttons infinitely
+    - Swipe pictures every 5 seconds
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Phones page
+1. Created `PhonesPage` available at `/phones` with just a title `Mobile phones`
+1. Added `ProductsList` showing all the `phones`
+1. Added ability to sort the products by `model` (`Newest`), `name` (`Alphabetically`) and `price` (`Cheapest`)
+    - Saved sort order in the URL `?sort=age` and applied it after the page reload
+1. Added `Pagination` and `Items on page` with `4`, `8`, `16` and `All items` options.
+    - Saved `?page=2&perPage=8` in the URL and applied them after the page reload
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tablets and watches
+1. Created `TabletsPage` page available at `/tablets` working the same way as `PhonesPage`
+1. Created `WatchesPage` page available at `/watches` working the same way as `PhonesPage`
 
-### `npm test`
+### Product details page
+1. Created `ProductDetailsPage` available at `/product/:productId`
+    - `ProductCard` is a link to the details page
+1. Fetch phone details from API taking the `phoneId` from the URL
+    - Use `Loader` when fetching the details
+1. Showed the details on the page
+    - `Available colors` and `Select capacity`
+    - `About` section contain description
+    - `Tech specs`
+1. Added ability to choose a picture
+1. Added `Back` working the same way as a Browser `Back` button
+1. Added `Breadcrumbs` at the top
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cart
+1. Implemented `CartPage`
+1. `Add to cart` button in `ProductCart` add a product to the `Cart`
+1. If the product is already in the `Cart` the button say `Added to cart`
+1. Added ability to remove items from the `Cart` with a `x` button
+1. Added ability to change the quantity in the `Cart` with `-` and `+` buttons around the quantity
+1. Total amount and quantity calculated automatically
+1. Showed the total quantity near the `Cart` icon in the header
+1. Saved the `Cart` to the `localSotrage`
 
-### `npm run build`
+### Favorites
+1. Created `FavoritesPage` it show the `ProductsList` with all the favorite products
+1. Added ability to add/remove favorite products by pressing a hart
+1. Showed the favorites count near the `Favorites` icon in the header
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Search
+1. Added a `Search` component with an input into the `Header` to filter products
+1. Added `debounce` to the search field
+1. Saved `Search` params in the URL using `queryParams`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Tech stack
+1. HTML5, Sass/SCSS
+1. Flexbox, Grid, BEM
+1. JavaScript
+1. React, React router, React Hooks
+1. localStorage/JSON
+1. TypeScript
