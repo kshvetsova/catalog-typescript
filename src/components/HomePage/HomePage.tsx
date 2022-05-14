@@ -7,7 +7,6 @@ import watches from '../../data/watches.json';
 
 
 export const HomePage = React.memo(() => {
-  const title = ['Hot prices', 'Brand new models'];
   const hotProductList = useMemo(() => (
     [...phones]
       .filter(cart => cart.price.length > 1)
@@ -22,9 +21,9 @@ export const HomePage = React.memo(() => {
   return (
     <div className="HomePage">
       <PromoSlider />
-      <ProductsSlider title={title[0]} products={hotProductList}/>
+      <ProductsSlider title="Hot prices" products={hotProductList}/>
       <Category />
-      <ProductsSlider title={title[1]} products={newProductList}/>
+      <ProductsSlider title="Brand new models" products={newProductList}/>
     </div>
   )
 })

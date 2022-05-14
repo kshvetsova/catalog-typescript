@@ -184,7 +184,7 @@ export const PageContent = React.memo(({ products, title }: Content) => {
           </div>
         )}
         <ul className="PageContent-Content">
-          {visibleProducts.map(product => <Product {...product}/>)}
+          {visibleProducts.map(product => <Product {...product} />)}
         </ul>
       </div>
       {(path !== 'favorites'
