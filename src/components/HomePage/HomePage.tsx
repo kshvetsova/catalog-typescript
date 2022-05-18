@@ -23,7 +23,10 @@ export const HomePage = React.memo(() => {
       <PromoSlider />
       <ProductsSlider title="Hot prices" products={hotProductList}/>
       <Category />
-      <ProductsSlider title="Brand new models" products={newProductList}/>
+      <ProductsSlider
+        title="Brand new models"
+        products={newProductList}
+      />
     </div>
   )
 })

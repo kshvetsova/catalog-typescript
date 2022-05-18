@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useMemo, useCallback, useContext } from 'react';
-import { useNavigate, useParams, NavLink} from 'react-router-dom';
+import { useNavigate, useParams, NavLink } from 'react-router-dom';
 import details from '../../data/details.json';
 import classNames from 'classnames';
 import { Buttons } from '../Buttons';
@@ -16,7 +16,7 @@ interface ItemList {
 
 export const ProductDetailsPage = React.memo(() => {
   const { productsList } = useContext(ProductsContext);
-  const { productId = '', typeProduct = ''} = useParams<{productId: string, typeProduct: string}>() || '0';
+  const { productId = '', typeProduct = '' } = useParams<{productId: string, typeProduct: string}>() || '0';
   const navigate = useNavigate();
   const [product, setProduct] = useState(
     productsList[typeProduct].find((item: { id: number}) => item.id === +productId)

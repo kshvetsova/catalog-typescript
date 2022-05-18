@@ -19,7 +19,7 @@ export const Product = React.memo(({
   const { path } = useContext(ProductsContext);
 
   return (
-    <li className="Product" key={id.toString()}>
+    <div className="Product">
       <NavLink
         className="Product-ImageContainer"
         to={path.includes(`/${type}/product`)
@@ -61,6 +61,6 @@ export const Product = React.memo(({
         name={name}
         image={images[0]}
       />
-    </li>
+    </div>
   );
 })
