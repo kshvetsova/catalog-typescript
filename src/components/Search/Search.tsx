@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import classNames from 'classnames';
 import { setValueInput, initialValue } from '../../helpers/search';
-import './Search.scss';
 import { ProductsContext } from '../../ProductsProvider';
+import './Search.scss';
 
 export const Search = React.memo(() => {
   const [value, setValue] = useState<any>(initialValue);
@@ -29,7 +29,7 @@ export const Search = React.memo(() => {
           applyValue({...appliedValue, [path]: e.target.value});
       }}
       />
-      {value[path] ? (
+      { value[path] ? (
         <button
           className="Search-ButtonClear button-search"
           type="button"

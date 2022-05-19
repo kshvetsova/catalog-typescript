@@ -10,7 +10,7 @@ interface Cart extends Item {
   totalPrice: number;
 };
 
-export const ProductCart = React.memo(({
+export const ProductCart: React.FC<Cart> = React.memo(({
   name,
   price,
   image,
@@ -20,25 +20,27 @@ export const ProductCart = React.memo(({
   setQuantity,
   setTotalPrice,
   totalPrice,
-  }: Cart) => {
+  }) => {
   const {carts, setCarts} = useContext(ProductsContext);
 
   const addCountCart = useCallback((id) => setCarts(
-    carts.map((item: {id: number, count: number}) => (item.id === id)
-    ? { ...item, count: item.count + 1}
-    : item)), [carts]);
+    carts.map(item => (item.id === id)
+      ? { ...item, count: item.count + 1}
+      : item)
+  ), [carts]);
 
   const removeCountCart = useCallback((id) => setCarts(
-    carts.map((item: {id: number, count: number}) => (item.id === id)
+    carts.map(item => (item.id === id)
     ? { ...item, count: item.count - 1}
-    : item)), [carts]);
+    : item)
+  ), [carts]);
 
   return (
     <div className="ProductCart">
       <div className="ProductCart-ContainerLeft">
         <button
           className="ProductCart-Close"
-          onClick={() => setCarts(carts.filter((item: Item) => item.id !== id))}
+          onClick={() => setCarts(carts.filter(item => item.id !== id))}
         >
           {}
         </button>

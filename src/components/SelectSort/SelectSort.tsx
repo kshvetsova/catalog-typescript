@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
+import { ProductsContext } from '../../ProductsProvider';
 import classNames from 'classnames';
 import './SelectSort.scss';
-import { ProductsContext } from '../../ProductsProvider';
 
-export const SelectSort = React.memo(({ list }: {list: string[]}) => {
+type Props = {
+  list: string[],
+}
+
+export const SelectSort: React.FC<Props> = React.memo(({ list }) => {
   const {
     path,
     toggleSort,

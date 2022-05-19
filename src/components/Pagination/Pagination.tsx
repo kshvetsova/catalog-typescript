@@ -12,8 +12,8 @@ export const Pagination = React.memo(() => {
     path,
   } = useContext(ProductsContext);
 
-  const lastPage: number = useMemo(() => (
-    Math.ceil(productsList[path].length / pageItems[path])),
+  const lastPage = useMemo(() => (
+    Math.ceil(productsList[path].length / +pageItems[path])),
     [productsList[path], pageItems[path]]
   );
 
@@ -28,18 +28,18 @@ export const Pagination = React.memo(() => {
       <button
         type="button"
         className={classNames('Pagination-Button Pagination-Button_prev', {
-          disabled_prev: page[path] === 1
+          disabled_prev: +page[path] === 1
         })}
-        disabled={page[path] === 1}
+        disabled={+page[path] === 1}
         onClick={() => {
-          setPage({...page, [path]: page[path] - 1});
+          setPage({...page, [path]: +page[path] - 1});
         }}
       >
         {}
       </button>
       <ul className="Pagination-List">
         {list.map(val => val + 1)
-          .map((item: string, index: number) => (
+          .map((item , index) => (
             <li
               className={classNames('Pagination-Item', {
                 active_item: item === page[path],
@@ -56,11 +56,11 @@ export const Pagination = React.memo(() => {
       <button
         type="button"
         className={classNames('Pagination-Button Pagination-Button_next', {
-          disabled_next: page[path] === lastPage
+          disabled_next: +page[path] === lastPage
         })}
-        disabled={page[path] === lastPage}
+        disabled={+page[path] === lastPage}
         onClick={() => {
-          setPage({...page, [path]: page[path] + 1});
+          setPage({...page, [path]: +page[path] + 1});
         }}
       >
         {}

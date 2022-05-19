@@ -4,12 +4,12 @@ import { Product } from '../Product';
 import { ProductCart } from '../../helpers/utils';
 import './ProductsSlider.scss';
 
-interface Products {
+type Props = {
   title: string;
   products: ProductCart[];
 }
 
-export const ProductsSlider = React.memo(({ title, products }: Products) => {
+export const ProductsSlider: React.FC<Props> = React.memo(({ title, products }) => {
   const [sliderWidth, setSliderWidth] = useState(getSliderWidth())
   const [currentPosition, setCurrentPosition] = useState(0);
   const [cartLength, setCartLength] = useState(getCartLength());

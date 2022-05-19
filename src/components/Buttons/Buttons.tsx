@@ -3,7 +3,12 @@ import { ProductsContext } from '../../ProductsProvider';
 import { Item } from '../../helpers/utils';
 import './Buttons.scss';
 
-export const Buttons = React.memo(({ id, price, name, image }: Item) => {
+export const Buttons: React.FC<Partial<Item>> = React.memo(({
+  id,
+  price,
+  name,
+  image
+}) => {
   const {
     carts,
     setCarts,
@@ -13,7 +18,7 @@ export const Buttons = React.memo(({ id, price, name, image }: Item) => {
 
   return (
     <div className="Buttons">
-      {!carts.find((item: Item) => item.id === id) ? (
+      {!carts.find(item => item.id === id) ? (
         <button
           type="button"
           className="Buttons-ButtonAdd"
@@ -44,7 +49,7 @@ export const Buttons = React.memo(({ id, price, name, image }: Item) => {
         <button
           type="button"
           className="Buttons-ButtonFavorites Buttons-ButtonFavorites_selected"
-          onClick={() => setFavorites(favorites.filter((item: number) => item !== id))}
+          onClick={() => setFavorites(favorites.filter(item => item !== id))}
         >
           <img src="./img/icons-page/favorites-selected.svg" alt="Favorites"/>
         </button>

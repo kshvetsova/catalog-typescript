@@ -9,12 +9,13 @@ import { initialItemsPageSelect } from '../../helpers/select';
 import { ProductCart } from '../../helpers/utils';
 import './PageContent.scss';
 
-interface Content {
+
+type Props = {
   products: ProductCart[];
   title: string;
 }
 
-export const PageContent = React.memo(({ products, title }: Content) => {
+export const PageContent: React.FC<Props> = React.memo(({ products, title }) => {
   const {
     appliedValue,
     path,
@@ -44,7 +45,7 @@ export const PageContent = React.memo(({ products, title }: Content) => {
     if (!['home', 'favorites', 'cart'].includes(path)) {
       if (pageItems[path] !== 'All items') {
         searchParams.set('perPage', pageItems[path]);
-        searchParams.set('page', page[path]);
+        searchParams.set('page', page ? page[path] : '');
       } else {
         searchParams.delete('perPage');
         searchParams.delete('page');
@@ -70,10 +71,10 @@ export const PageContent = React.memo(({ products, title }: Content) => {
     ]
   );
 
-  let forPage = useMemo(() => (page[path] - 1) * pageItems[path],
+  let forPage = useMemo(() => (+page[path] - 1) * +pageItems[path],
     [page[path], pageItems[path]]
   );
-  let toPage = useMemo(() => pageItems[path] * page[path],
+  let toPage = useMemo(() => +pageItems[path] * +page[path],
     [page[path], pageItems[path]]
   );
 
@@ -96,7 +97,7 @@ export const PageContent = React.memo(({ products, title }: Content) => {
 
   const visibleProducts = useMemo(() => {
     if ( appliedValue[path]) {
-      return products.filter((product: { name: string }) => product.name.toLowerCase()
+      return products.filter(product => product.name.toLowerCase()
       .includes(appliedValue[path].toLowerCase()))
     }
 

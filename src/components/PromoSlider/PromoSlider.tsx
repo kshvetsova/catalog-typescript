@@ -59,7 +59,7 @@ export const PromoSlider = React.memo(() => {
                 : 0}px`,
             }}
           >
-            {images.map((image) => (
+            {images.map(image => (
               <li className="PromoSlider-Item" key={image}>
                 <img
                   src={image}

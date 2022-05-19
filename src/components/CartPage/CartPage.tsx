@@ -3,7 +3,6 @@ import './CartPage.scss';
 import { useNavigate } from 'react-router-dom';
 import { ProductCart } from '../ProductCart';
 import { ProductsContext } from '../../ProductsProvider';
-import { Item, Price } from '../../helpers/utils';
 
 export const CartPage = React.memo(() => {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ export const CartPage = React.memo(() => {
     JSON.parse(localStorage.getItem('carts') as string) as []
       ? (JSON.parse(localStorage.getItem('carts') as string) as [])
           .reduce((sum, {count, price}) => sum + (count * price), 0)
-      : carts.reduce((sum: number, { count, price }: Price) => sum + (count * price), 0)
+      : carts.reduce((sum, { count, price }) => sum + (count * price), 0)
   );
 
   const [quantity, setQuantity] = useState(
@@ -24,11 +23,13 @@ export const CartPage = React.memo(() => {
   );
 
   useEffect(() => (
-    setQuantity(carts.reduce((sum: number, { count }: Pick<Price, 'count'>) => sum + count, 0))
+    setQuantity(carts.reduce((sum, { count }) => sum + count, 0))
   ), [quantity, carts]);
 
   useEffect(() => (
-    setTotalPrice(carts.reduce((sum: number, { count, price }: Price) => sum + (count * price), 0))
+    setTotalPrice(carts
+      .reduce((sum, { count, price }) => sum + (count * price), 0)
+    )
   ), [totalPrice, carts]);
 
   return (
@@ -46,7 +47,7 @@ export const CartPage = React.memo(() => {
       <h1 className="CartPage-Title">Cart</h1>
       <div className="CartPage-Content">
         <ul className="CartPage-ContainerCart">
-          {carts.map((item: Item) => (
+          {carts.map(item => (
             <li key={item.id}>
               <ProductCart
                 {...item}

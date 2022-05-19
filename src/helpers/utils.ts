@@ -10,13 +10,8 @@ export interface Item {
   price: number;
   image: string;
   id: number;
-  count?: number;
-};
-
-export interface Price {
   count: number;
-  price: number;
-}
+};
 
 export interface ProductCart {
   images: string[];
@@ -29,4 +24,3 @@ export interface ProductCart {
   model: string;
   color?: string;
 }
-

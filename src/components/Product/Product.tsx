@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import './Product.scss';
 
 
-export const Product = React.memo(({
+export const Product: React.FC<ProductCart> = React.memo(({
   images,
   name,
   price,
@@ -15,7 +15,7 @@ export const Product = React.memo(({
   id,
   type,
   option
-}: ProductCart) => {
+}) => {
   const { path } = useContext(ProductsContext);
 
   return (

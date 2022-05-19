@@ -2,7 +2,11 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ProductsContext } from '../../ProductsProvider';
 
-export const SelectItems = React.memo(({ list }: {list: string[]}) => {
+type Props = {
+  list: string[];
+}
+
+export const SelectItems: React.FC<Props> = React.memo(({ list }) => {
   const {
     path,
     setPage,
@@ -45,7 +49,7 @@ export const SelectItems = React.memo(({ list }: {list: string[]}) => {
               onClick={() => {
                 setPageItems({...pageItems, [path]: item});
                 setToggleItemsPage({...toggleItemsPage, [path]: false});
-                if(item !== pageItems[page]) {
+                if (item !== pageItems[path]) {
                   setPage({...page, [path]: 1});
                 }
               }}

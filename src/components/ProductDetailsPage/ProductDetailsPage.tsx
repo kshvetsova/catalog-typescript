@@ -5,37 +5,39 @@ import classNames from 'classnames';
 import { Buttons } from '../Buttons';
 import { ProductsSlider } from '../ProductsSlider';
 import { ProductsContext } from '../../ProductsProvider';
+import { ProductCart } from '../../helpers/utils';
 import './ProductDetailsPage.scss';
-
-interface ItemList {
-  color: string;
-  type: string;
-  option: string;
-  model: string;
-}
 
 export const ProductDetailsPage = React.memo(() => {
   const { productsList } = useContext(ProductsContext);
-  const { productId = '', typeProduct = '' } = useParams<{productId: string, typeProduct: string}>() || '0';
+  const { productId = '', typeProduct = '' } = useParams();
   const navigate = useNavigate();
-  const [product, setProduct] = useState(
-    productsList[typeProduct].find((item: { id: number}) => item.id === +productId)
+  const [product, setProduct] = useState<Partial<ProductCart>>(
+    productsList[typeProduct].find(item => item.id === +productId) || {}
   );
   const [image, setImage] = useState('');
   const [imageHover, setImageHover] = useState('');
   const [colorList, setColorList] = useState([['']]);
   const [optionList, setOptionList] = useState(['']);
   const {
-    name, images, model, color, id , type, option, price, tech
+    name = '',
+    images = [],
+    model = '',
+    color = '',
+    id = 0,
+    type = '',
+    option = '',
+    price = [],
+    tech = []
   } = product;
 
   useEffect(() => {
     setProduct(productsList[typeProduct]
-      .find((item: { id: number }) => item.id === +productId));
+      .find(item => item.id === +productId) || {});
   }, [productId, typeProduct]);
 
   useEffect(() => {
-    setImage(images[0]);
+    setImage(images[0] || '')
     if (product) {
       const productItem = details.find(item => item.models === model);
       setColorList(productItem ? productItem.colors : [['']]);
@@ -43,21 +45,23 @@ export const ProductDetailsPage = React.memo(() => {
     }
   }, [productId, typeProduct, product]);
 
-  const findProductColor = useCallback((colorItem) => (
-    productsList[typeProduct].find((item: ItemList) => (
+  const findProductColor = useCallback(colorItem => {
+    const productItem = productsList[typeProduct].find(item => (
       item.color === colorItem &&
       item.type === typeProduct &&
       item.option === option &&
-      item.model === model)).id
-  ), [productId, product]);
+      item.model === model));
+      return productItem ? productItem.id : 0;
+  }, [productId, product]);
 
-  const findProductOption = useCallback((optionItem) => (
-    productsList[typeProduct].find((item: ItemList) => (
+  const findProductOption = useCallback((optionItem) => {
+    const productItem = productsList[typeProduct].find(item => (
       item.color === color &&
       item.type === typeProduct &&
       item.option === optionItem &&
-      item.model === model)).id
-  ), [productId, product]);
+      item.model === model));
+    return productItem ? productItem.id : 0;
+  }, [productId, product]);
 
   const detailsProduct = useMemo(() => {
     const productItem = [...details]
@@ -110,7 +114,7 @@ export const ProductDetailsPage = React.memo(() => {
       <div className="ProductDetailsPage-ContainerTop">
         <div className="ProductDetailsPage-BlockImages BlockImages">
           <ul className="BlockImages-List">
-            {product.images.map((item: string, index: number) => (
+            { product.images && (product.images.map((item, index) => (
               <li
                 key={index}
                 className={classNames('BlockImages-Item', {
@@ -130,7 +134,7 @@ export const ProductDetailsPage = React.memo(() => {
                   className="imageItem"
                 />
               </li>
-            ))}
+            )))}
           </ul>
           <img
             src={imageHover ? `./${imageHover}` : `./${image}`}
@@ -203,7 +207,7 @@ export const ProductDetailsPage = React.memo(() => {
               />
             </div>
             <ul className="BlockOptions-Details Details">
-              {tech.map(([name, value]: [string[], number]) => (
+              {tech.map(([name, value]) => (
                 <li className="Details-Item" key={value}>
                   <p className="Details-Name">{name}</p>
                   <p className="Details-Value">{value}</p>

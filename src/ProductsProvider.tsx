@@ -10,22 +10,36 @@ import {
   initialToggleSelect,
   initialItemsPageSelect } from './helpers/select';
 import { initialPage } from './helpers/pagination';
+import { Item, ProductCart } from './helpers/utils';
 
-export const ProductsContext = React.createContext<{[key: string]: any}>({});
+interface Context {
+  [key: string]: any,
+  carts: Item[],
+  favorites: (number | undefined)[],
+  productsList: {[key: string]: ProductCart[]},
+  path: string,
+}
+
+export const ProductsContext = React.createContext<Context>({
+  carts: [],
+  favorites: [],
+  productsList: {},
+  path: '',
+})
 
 const root = document.getElementById('root') as HTMLElement;
 
-interface Children {
+type Children = {
   children: React.ReactNode;
 }
 
-export const ProductsProvider = ({ children }: Children ) => {
+export const ProductsProvider: React.FC<Children> = ({ children }) => {
   const [productsList] = useState({ phones, tablets, watches });
   const [appliedValue, setAppliedValue] = useState(initialValue);
   const applyValue = useCallback(debounce(setAppliedValue, 1000), []);
   const [sortCarts, setSortCarts] = useState(initialSortSelect);
   const [toggleSort, setToggleSort] = useState(initialToggleSelect);
-  const [pageItems, setPageItems] = useState(initialItemsPageSelect)
+  const [pageItems, setPageItems] = useState<any | {}>(initialItemsPageSelect)
   const [toggleItemsPage, setToggleItemsPage] = useState(initialToggleSelect);
   const [page, setPage] = useState(initialPage);
   const { pathname } = useLocation();
@@ -34,7 +48,7 @@ export const ProductsProvider = ({ children }: Children ) => {
     JSON.parse(localStorage.getItem('favorites') as string) as []
   );
 
-  const [carts, setCarts] = useState(
+  const [carts, setCarts] = useState<Item[]>(
     JSON.parse(localStorage.getItem('carts') as string) as []);
 
   useEffect(() => (
