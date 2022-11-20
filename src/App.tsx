@@ -11,7 +11,7 @@ import { Layout } from './components/Layout/Layout';
 export const App = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
-      <Route index element={<Navigate to="home" replace/>}/>
+      <Route index element={<Navigate to="home" replace/>} />
       <Route path="home" element={<HomePage />} />
       <Route path="phones" element={<PhonesPage />} />
       <Route

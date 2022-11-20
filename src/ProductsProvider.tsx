@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect, useCallback} from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import phones from './data/phones.json';
 import watches from './data/watches.json';
@@ -20,12 +20,21 @@ interface Context {
   path: string,
 }
 
-export const ProductsContext = React.createContext<Context>({
-  carts: [],
+export const ProductsContext = React.createContext<Context>(
+  {
+  carts:
+  [{
+    name: '',
+    price: 0,
+    image: '',
+    id: 0,
+    count: 0
+  }],
   favorites: [],
   productsList: {},
   path: '',
-})
+}
+)
 
 const root = document.getElementById('root') as HTMLElement;
 
@@ -36,7 +45,7 @@ type Children = {
 export const ProductsProvider: React.FC<Children> = ({ children }) => {
   const [productsList] = useState({ phones, tablets, watches });
   const [appliedValue, setAppliedValue] = useState(initialValue);
-  const applyValue = useCallback(debounce(setAppliedValue, 1000), []);
+  const applyValue = useMemo(() => debounce(setAppliedValue, 1000), []);
   const [sortCarts, setSortCarts] = useState(initialSortSelect);
   const [toggleSort, setToggleSort] = useState(initialToggleSelect);
   const [pageItems, setPageItems] = useState<any | {}>(initialItemsPageSelect)
@@ -44,12 +53,17 @@ export const ProductsProvider: React.FC<Children> = ({ children }) => {
   const [page, setPage] = useState(initialPage);
   const { pathname } = useLocation();
   const path = pathname.slice(1);
-  const [favorites, setFavorites] = useState(
+  const [favorites, setFavorites] = useState<(number | undefined)[]>(
     JSON.parse(localStorage.getItem('favorites') as string) as []
-  );
+  || []);
 
-  const [carts, setCarts] = useState<Item[]>(
-    JSON.parse(localStorage.getItem('carts') as string) as []);
+  const [carts, setCarts] = useState<Item[] | []>(
+    JSON.parse(localStorage.getItem('carts') as string) as [] || []);
+    
+  window.addEventListener('beforeunload', () => {
+    localStorage.setItem('carts', JSON.stringify(carts));
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  });
 
   useEffect(() => (
     localStorage.setItem('favorites', JSON.stringify(favorites))
@@ -58,6 +72,7 @@ export const ProductsProvider: React.FC<Children> = ({ children }) => {
   useEffect(() => (
     localStorage.setItem('carts', JSON.stringify(carts))
   ), [carts]);
+
 
   useEffect(() => root.scrollIntoView(), [path]);
 
@@ -95,3 +110,4 @@ export const ProductsProvider: React.FC<Children> = ({ children }) => {
     </ProductsContext.Provider>
   )
 }
+
