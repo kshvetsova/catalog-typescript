@@ -114,9 +114,9 @@ export const ProductDetailsPage = React.memo(() => {
       <div className="ProductDetailsPage-ContainerTop">
         <div className="ProductDetailsPage-BlockImages BlockImages">
           <ul className="BlockImages-List">
-            { product.images && (product.images.map((item, index) => (
+            { product.images && (product.images.map(item => (
               <li
-                key={index}
+                key={item}
                 className={classNames('BlockImages-Item', {
                   item_active: item === image,
                   item_size: ["11 Pro", "Air 4", "Pro 12.9\"", "Pro 12.9\" M1"].includes(model) || typeProduct === "watches",

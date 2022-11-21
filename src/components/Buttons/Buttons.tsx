@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { ProductsContext } from '../../ProductsProvider';
-import { Item } from '../../helpers/utils';
+import { Product } from '../../helpers/utils';
 import './Buttons.scss';
 
-export const Buttons: React.FC<Partial<Item>> = React.memo(({
+export const Buttons: React.FC<Partial<Product>> = React.memo(({
   id,
   price,
   name,

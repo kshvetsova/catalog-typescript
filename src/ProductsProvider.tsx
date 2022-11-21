@@ -10,33 +10,25 @@ import {
   initialToggleSelect,
   initialItemsPageSelect } from './helpers/select';
 import { initialPage } from './helpers/pagination';
-import { Item, ProductCart } from './helpers/utils';
+import { Product, ProductCart } from './helpers/utils';
+import { useLocalStorage } from './helpers/useLocalStorage';
 
-interface Context {
+const root = document.getElementById('root') as HTMLElement;
+
+type Props = {
   [key: string]: any,
-  carts: Item[],
+  carts: Product[],
   favorites: (number | undefined)[],
   productsList: {[key: string]: ProductCart[]},
   path: string,
 }
 
-export const ProductsContext = React.createContext<Context>(
-  {
-  carts:
-  [{
-    name: '',
-    price: 0,
-    image: '',
-    id: 0,
-    count: 0
-  }],
+export const ProductsContext = React.createContext<Props>({
+  carts: [],
   favorites: [],
   productsList: {},
   path: '',
-}
-)
-
-const root = document.getElementById('root') as HTMLElement;
+});
 
 type Children = {
   children: React.ReactNode;
@@ -53,28 +45,15 @@ export const ProductsProvider: React.FC<Children> = ({ children }) => {
   const [page, setPage] = useState(initialPage);
   const { pathname } = useLocation();
   const path = pathname.slice(1);
-  const [favorites, setFavorites] = useState<(number | undefined)[]>(
-    JSON.parse(localStorage.getItem('favorites') as string) as []
-  || []);
-
-  const [carts, setCarts] = useState<Item[] | []>(
-    JSON.parse(localStorage.getItem('carts') as string) as [] || []);
-    
-  window.addEventListener('beforeunload', () => {
-    localStorage.setItem('carts', JSON.stringify(carts));
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  });
-
-  useEffect(() => (
-    localStorage.setItem('favorites', JSON.stringify(favorites))
-  ), [favorites]);
-
-  useEffect(() => (
-    localStorage.setItem('carts', JSON.stringify(carts))
-  ), [carts]);
-
+  const [favorites, setFavorites] = useLocalStorage('favorites', [])
+  const [carts, setCarts] = useLocalStorage('carts', []);
 
   useEffect(() => root.scrollIntoView(), [path]);
+
+  window.addEventListener('beforeunload', () => {
+    setCarts(carts);
+    setFavorites(favorites);
+  });
 
   const contextValue = useMemo(() => (
     {
@@ -99,8 +78,8 @@ export const ProductsProvider: React.FC<Children> = ({ children }) => {
       page,
   }),
     [ favorites, carts, productsList, appliedValue,
-      applyValue, setAppliedValue, path, sortCarts,
-      toggleSort, pageItems, toggleItemsPage, page
+      applyValue, path, sortCarts, toggleSort,
+      pageItems, toggleItemsPage, page
     ]
   );
 

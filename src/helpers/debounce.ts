@@ -1,6 +1,6 @@
-import { Value } from './utils';
+import { Option } from './utils';
 
-export const debounce = (f: React.Dispatch<React.SetStateAction<Value>>,
+export const debounce = (f: React.Dispatch<React.SetStateAction<Option>>,
   delay: number) => {
   let timerId: any;
 

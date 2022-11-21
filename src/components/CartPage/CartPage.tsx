@@ -4,34 +4,21 @@ import { useNavigate } from 'react-router-dom';
 import { ProductCart } from '../ProductCart';
 import { ProductsContext } from '../../ProductsProvider';
 
-let cartsLocalStorage: ([] | null) = JSON.parse(
-  localStorage.getItem('carts') as string
-) || [];
 export const CartPage = React.memo(() => {
   const navigate = useNavigate();
   const { carts, setCarts } = useContext(ProductsContext);
   const [totalPriceHidden, setTotalPriceHidden] = useState(false);
-
   const [totalPrice, setTotalPrice] = useState(
-    cartsLocalStorage
-    ? cartsLocalStorage.reduce((sum, {count, price}) => sum + (count * price), 0)
-    : carts.reduce((sum, { count, price }) => sum + (count * price), 0)
+    carts.reduce((sum, { count, price }) => sum + (count * price), 0)
   );
-
-  const [quantity, setQuantity] = useState(
-    cartsLocalStorage
-      ? cartsLocalStorage
-        .reduce((sum, {count}) => sum + count, 0)
-      : carts.length
-  );
+  const [quantity, setQuantity] = useState(carts.length);
 
   useEffect(() => {
     setQuantity(carts.reduce((sum, { count }) => sum + count, 0))
-}, [quantity, carts]);
+  }, [quantity, carts]);
 
   useEffect(() => {
-    setTotalPrice(carts
-      .reduce((sum, { count, price }) => sum + (count * price), 0))
+    setTotalPrice(carts.reduce((sum, { count, price }) => sum + (count * price), 0))
   }, [totalPrice, carts]);
 
   return (

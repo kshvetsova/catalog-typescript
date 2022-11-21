@@ -1,4 +1,4 @@
-import { Value } from "./utils";
+import { Option } from "./utils";
 
 export const initialValue = {
   phones: '',
@@ -7,7 +7,7 @@ export const initialValue = {
   favorites: '',
 }
 
-export const setValueInput = (pathname: string, value: Value ) => {
+export const setValueInput = (pathname: string, value: Option ) => {
   switch(pathname) {
     case 'phones':
       return value.phones;

@@ -1,9 +1,9 @@
 import React, { useContext, useCallback } from 'react';
 import './ProductCart.scss';
 import { ProductsContext } from '../../ProductsProvider';
-import { Item } from '../../helpers/utils';
+import { Product } from '../../helpers/utils';
 
-interface Cart extends Item {
+interface Cart extends Product {
   quantity: number;
   setQuantity: React.Dispatch<any>;
   setTotalPrice: React.Dispatch<any>;

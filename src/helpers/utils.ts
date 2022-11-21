@@ -1,11 +1,11 @@
-export interface Value {
+export interface Option {
   phones: string;
   tablets: string;
   watches: string;
   favorites: string;
 }
 
-export interface Item {
+export interface Product {
   name: string;
   price: number;
   image: string;
